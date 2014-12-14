@@ -1,0 +1,74 @@
+<!DOCTYPE ui:UiBinder SYSTEM 'http://dl.google.com/gwt/DTD/xhtml.ent'>
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:c='urn:import:com.google.gwt.user.cellview.client'
+	xmlns:b='urn:import:com.test.client'>
+	<ui:style type='com.test.client.MySplitLayoutPanel.MyStyle'>
+
+		.cellTable {
+		height: 400px;
+		width: 600px;
+		border: 1px solid #ccc;
+		text-align: left;
+		font-family: "Lucida Console", Monospace;
+		}
+
+		.buttons {
+		margin-left: 20px;
+		margin-up: 20px;
+		height: 40px;
+		width: 60px;
+		font-family: "Lucida Console", Monospace;
+		font-color: #99C;
+		}
+		.enabled {
+            background-color: green;
+        }
+
+        .disabled {
+            background-color: gray;
+        }
+
+		.labels {
+		margin-up: 20px;
+		margin-left: 20px;
+		font-color: #99C;
+		font-size: 14px;
+		font-style: normal;
+		font-family: "Lucida Console", Monospace;
+		}
+	</ui:style>
+	<g:SplitLayoutPanel ui:field='splitLayoutPanel'>
+		<g:north size='400' unit='PCT'>
+		    <g:DockLayoutPanel>
+		    <g:center unit='PCT'>
+			<c:DataGrid ui:field='dataGrid' />
+			</g:center>
+			</g:DockLayoutPanel>
+		</g:north>
+
+		<g:center unit='PCT' >
+		    <g:SplitLayoutPanel >
+		        <g:west size='600' unit='PCT'>
+		            <g:DockLayoutPanel>
+		                <g:north size='50' unit='PCT'>
+			                <g:Label ui:field='emailLabel' styleName='{style.labels}'/>
+		                </g:north>
+		                <g:center unit='PCT'>
+			                <g:Label ui:field='surnameLabel' styleName='{style.labels}'/>
+		                </g:center>
+		            </g:DockLayoutPanel>
+		        </g:west>
+		        <g:center unit='PCT'>
+		            <g:DockLayoutPanel>
+		                <g:north size='50' unit='PCT'>
+			                <g:CheckBox ui:field='disableCheck' name='disableCheck'/>
+		                </g:north>
+		                <g:center unit='PCT'>
+			                <g:Button ui:field='goButton' styleName='style.buttons'/>
+		                </g:center>
+		            </g:DockLayoutPanel>
+		        </g:center>
+		    </g:SplitLayoutPanel>
+		</g:center>
+	</g:SplitLayoutPanel>
+</ui:UiBinder> 
