@@ -33,7 +33,7 @@ import com.test.shared.model.UserRole;
 
 public class MySplitLayoutPanel extends Composite {
 
-	private final CwConstants constants = GWT.create(CwConstants.class);
+	private final MyConstants constants = GWT.create(MyConstants.class);
 	
 	@UiField 
 	MyStyle style;
@@ -74,7 +74,6 @@ public class MySplitLayoutPanel extends Composite {
 		dataGrid = new DataGrid<User>(User.KEY_PROVIDER);
 		dataGrid.setWidth("100%");
 		dataGrid.setAutoHeaderRefreshDisabled(true);
-
 		// Set the message to display when the table is empty.
 		dataGrid.setEmptyTableWidget(new Label(constants.cwDataGridEmpty()));
 

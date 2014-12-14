@@ -5,7 +5,7 @@ import com.google.gwt.i18n.client.Constants;
 /**
  * The constants used in this Content Widget.
  */
-public interface CwConstants extends Constants {
+public interface MyConstants extends Constants {
 	String cwDataGridColumnEmail();
 
 	String cwDataGridColumnUserRole();
